@@ -1,0 +1,28 @@
+/************************TRICK HEADER*************************
+PURPOSE:
+    (This S_define works with the RUN_analytic input file)
+LIBRARY DEPENDENCIES:
+    (
+      (uia/src/uia_init.c)
+      (uia/src/uia_analytic.c)
+      (uia/src/uia_shutdown.c)
+    )
+*************************************************************/
+
+#include "sim_objects/default_trick_sys.sm"
+##include "uia/include/uia_analytic.h"
+
+class UiaSimObject : public Trick::SimObject {
+
+    public:
+        UIA uia;
+
+        UiaSimObject() {
+            ("default_data") uia_default_data( &uia ) ;
+            ("initialization") uia_init( &uia ) ;
+            (0.01, "scheduled") uia_analytic( &uia ) ;
+            ("shutdown") uia_shutdown( &uia ) ;
+        }
+} ;
+
+UiaSimObject dyn ;

@@ -1,0 +1,17 @@
+build/
+DP_Product/
+trick/
+makefile
+S_*.exe
+S_sie.resource
+S_source.hh
+S_default.dat
+
+_init_log.csv
+log_*.header
+log_*.trk
+log_*.csv
+S_job_execution
+S_run_summary
+send_hs
+varserver_log
