@@ -16,4 +16,4 @@ Simple NASA Trick Simulation of the HAL UIA Panel
 	./S_main_Linux__x86_64.exe RUN_test/input.py
 	# Simulation starts and Sim Control window appears
 	```  
-## About the sim
+4. From the sim control window, open Trick View to view all sim variables.
